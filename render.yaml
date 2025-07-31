@@ -2,7 +2,7 @@ services:
   - type: web
     name: human-coin-site
     env: static
-    buildCommand: npm install
+    buildCommand: echo "No build needed for static site"
     staticPublishPath: .
     routes:
       - type: rewrite
