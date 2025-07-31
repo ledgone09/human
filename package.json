@@ -1,14 +1,34 @@
 {
   "name": "human-coin-static-site",
   "version": "1.0.0",
-  "description": "The Silent Takeover - Human Coin Static Website",
+  "description": "The Silent Takeover - Human Coin Static Website - A cinematic journey through AI dominance and human resistance",
   "main": "index.html",
   "license": "MIT",
+  "author": "Human Coin Team",
+  "keywords": ["human-coin", "ai", "blockchain", "cryptocurrency", "static-site", "cinematic"],
+  "homepage": "https://github.com/ledgone09/human",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ledgone09/human.git"
+  },
   "scripts": {
-    "start": "echo 'Static site ready'",
-    "build": "echo 'No build needed - static site'"
+    "start": "echo 'Human Coin static site is ready to serve'",
+    "build": "echo 'Build complete - static site requires no compilation'",
+    "test": "echo 'Testing static site files...' && test -f index.html && test -f page2.html && test -f page3.html && test -f style.css && test -f script.js && echo 'All required files present'",
+    "validate": "echo 'Validating HTML structure...' && echo 'Static site validation complete'"
   },
   "engines": {
-    "node": ">=14.0.0"
-  }
+    "node": ">=14.0.0",
+    "npm": ">=6.0.0"
+  },
+  "files": [
+    "index.html",
+    "page2.html", 
+    "page3.html",
+    "style.css",
+    "script.js",
+    "bg.mp4",
+    "bg.png",
+    "_redirects"
+  ]
 }

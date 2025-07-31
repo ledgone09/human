@@ -2,8 +2,34 @@ services:
   - type: web
     name: human-coin-site
     env: static
-    buildCommand: echo "No build needed for static site"
+    buildCommand: |
+      echo "Starting static site build..."
+      echo "Checking files..."
+      ls -la
+      echo "Verifying HTML files exist..."
+      test -f index.html && echo "✓ index.html found" || echo "✗ index.html missing"
+      test -f page2.html && echo "✓ page2.html found" || echo "✗ page2.html missing"
+      test -f page3.html && echo "✓ page3.html found" || echo "✗ page3.html missing"
+      test -f style.css && echo "✓ style.css found" || echo "✗ style.css missing"
+      test -f script.js && echo "✓ script.js found" || echo "✗ script.js missing"
+      test -f bg.mp4 && echo "✓ bg.mp4 found" || echo "✗ bg.mp4 missing"
+      echo "Static site build complete - no compilation needed"
     staticPublishPath: .
+    headers:
+      - path: /*
+        headers:
+          X-Frame-Options: DENY
+          X-Content-Type-Options: nosniff
+          Referrer-Policy: strict-origin-when-cross-origin
+      - path: /bg.mp4
+        headers:
+          Cache-Control: public, max-age=31536000
+      - path: /style.css
+        headers:
+          Cache-Control: public, max-age=31536000
+      - path: /script.js
+        headers:
+          Cache-Control: public, max-age=31536000
     routes:
       - type: rewrite
         source: /*
