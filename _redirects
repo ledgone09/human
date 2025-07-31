@@ -1,0 +1,6 @@
+# Redirect all routes to index.html for client-side routing
+/*    /index.html   200
+
+# Specific page redirects
+/page2    /page2.html   200
+/page3    /page3.html   200
