@@ -511,6 +511,37 @@ body, .page2-body, .page3-body {
     line-height: 1.2;
 }
 
+.manifesto-stance {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #fff;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-transform: lowercase;
+    font-style: italic;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.9);
+    opacity: 0;
+    animation: manifestoLineReveal 1s ease-out forwards;
+    animation-delay: 3s;
+    line-height: 1.4;
+}
+
+.manifesto-coming-soon {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #ccc;
+    font-family: 'Space Grotesk', 'Inter', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-transform: lowercase;
+    text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+    opacity: 0;
+    animation: manifestoLineReveal 1s ease-out forwards;
+    animation-delay: 3.5s;
+    line-height: 1.4;
+}
+
 /* EPIC MANIFESTO ANIMATIONS */
 @keyframes manifestoAppear {
     0% {
